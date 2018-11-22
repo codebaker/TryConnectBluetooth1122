@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         for(BluetoothDevice d : pairedDeviceList) {
             pairedList.add(d.getName() + "\n" + bluetoothAdapter.getAddress());
         }
-        final ArrayAdapter adapter = new ArrayAdapter(this,R.layout.list_item,pairedList);
+        final ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,pairedList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this::OnItemClick);
     }
